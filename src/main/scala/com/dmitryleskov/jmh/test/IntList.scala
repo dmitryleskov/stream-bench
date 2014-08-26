@@ -3,10 +3,9 @@
  * Released into the public domain under the Unlicense, http://unlicense.org
  */
 
-/* SimpleList specialized for Int */
-
 package com.dmitryleskov.jmh.test {
 
+/** [[SimpleList]] specialized for `Int` */
   sealed abstract class IntList {
     def isEmpty: Boolean
     def head: Int

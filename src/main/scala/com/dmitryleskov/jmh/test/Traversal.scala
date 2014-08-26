@@ -1,7 +1,7 @@
 /*
  * Originally (c) 2014 Dmitry Leskov, http://www.dmitryleskov.com
  * Released into the public domain under the Unlicense, http://unlicense.org
- * 
+ *
  * Reducing maximum heap size (-Xmx) setting will cause the failing tests
  * to fail sooner, reducing the overall run time.
  */
@@ -12,6 +12,14 @@ import org.openjdk.jmh.annotations._
 import scala.annotation.tailrec
 import scalaz.EphemeralStream
   
+  /** Tests to compare the traversal overheads of various strict and lazy
+   *  linear Scala collections - standard, third-party, and written by hand.
+   *
+   *  The `*Length` tests only traverse the respective collection without
+   *  accessing the stored elements.
+   *
+   *  The `*Sum` tests compute a sum of all elements.
+   */
   @Warmup(iterations = 5)
   @Measurement(iterations = 10)
   @Fork(1)

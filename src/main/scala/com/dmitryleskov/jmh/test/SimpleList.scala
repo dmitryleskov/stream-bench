@@ -3,7 +3,7 @@
  * Released into the public domain under the Unlicense, http://unlicense.org
  */
 
-/* Bare-bones implementation of a generic immutable list */
+/** Bare-bones implementation of a generic immutable list */
 
 package com.dmitryleskov.jmh.test {
 
